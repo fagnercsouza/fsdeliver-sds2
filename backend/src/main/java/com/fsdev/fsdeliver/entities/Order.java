@@ -1,6 +1,8 @@
 package com.fsdev.fsdeliver.entities;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -10,6 +12,8 @@ import java.util.Set;
 @Data
 @Entity
 @Table(name = "tb_order")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Order implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -30,5 +34,14 @@ public class Order implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "product_id")
     )
     private Set<Product> products = new HashSet<>();
+
+    public Order(Long id, String address, Double latitude, Double longitude, Instant moment, OrderStatus status){
+        this.id = id;
+        this.address = address;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.moment = moment;
+        this.status = status;
+    }
 
 }
