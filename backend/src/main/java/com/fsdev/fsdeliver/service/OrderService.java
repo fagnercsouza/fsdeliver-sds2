@@ -10,6 +10,7 @@ import com.fsdev.fsdeliver.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PutMapping;
 
 import java.time.Instant;
 import java.util.List;
@@ -39,5 +40,13 @@ public class OrderService {
         }
         order = repository.save(order);
         return new OrderDTO(order);
+    }
+
+    @Transactional
+    public OrderDTO setDeliverd(Long id){
+       Order order = repository.getOne(id);
+       order.setStatus(OrderStatus.DELIVERED);
+       order = repository.save(order);
+       return new OrderDTO(order);
     }
  }
