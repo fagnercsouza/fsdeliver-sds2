@@ -1,7 +1,7 @@
 package com.fsdev.fsdeliver.rest;
 
-import com.fsdev.fsdeliver.dto.ProductDTO;
-import com.fsdev.fsdeliver.service.ProductService;
+import com.fsdev.fsdeliver.dto.OrderDTO;
+import com.fsdev.fsdeliver.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/products")
-public class ProductRest {
+@RequestMapping("/orders")
+public class OrderRest {
 
     @Autowired
-    private ProductService service;
+    private OrderService service;
 
     @GetMapping
-    public ResponseEntity<List<ProductDTO>> findAll(){
-        List<ProductDTO> list = service.findAll();
+    public ResponseEntity<List<OrderDTO>> findAll(){
+        List<OrderDTO> list = service.findAll();
         return ResponseEntity.ok().body(list);
     }
 }

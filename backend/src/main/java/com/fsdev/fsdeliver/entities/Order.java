@@ -5,6 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.HashSet;
 import java.util.Set;
 @Data
 @Entity
@@ -24,11 +25,10 @@ public class Order implements Serializable {
 
     @ManyToMany
     // Faz a referencia das colunas
-    @JoinTable(
-            name = "tb_order_product",
+    @JoinTable(name = "tb_order_product",
             joinColumns = @JoinColumn(name = "order_id"),
             inverseJoinColumns = @JoinColumn(name = "product_id")
     )
-    private Set<Product> products;
+    private Set<Product> products = new HashSet<>();
 
 }
