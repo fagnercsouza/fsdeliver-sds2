@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/fsdeliver</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="fsdeliver@heroku" uuid="ac399040-9d34-4bc6-8cde-24ffdf78ee06">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-54-85-80-92.compute-1.amazonaws.com:5432/d6lpufk27eniu0</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
