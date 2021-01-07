@@ -7,20 +7,9 @@
 }
 .navbar-text{
     margin-left: 15px;
-    /* position: absolute;
-    width: 133px;
-    height: 33px;
-    left: 94px;
-    top: 10px; */
-
-    /* font-family: Open Sans;
-    font-style: normal; */
     font-weight: bold;
     font-size: 24px;
     line-height: 33px;
-    /* identical to box height */
-
     letter-spacing: -0.015em;
-
     color: #FFFFFF;
 }
