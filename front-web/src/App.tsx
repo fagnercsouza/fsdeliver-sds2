@@ -1,9 +1,14 @@
 import './App.css';
-import Hello from './Hello';
 
 function App() {
-  return <Hello/>
- 
+
+  return (
+    <div>
+      <h1>Header</h1>
+      <hr/>
+     
+    </div>
+  );
 }
 
 export default App;
