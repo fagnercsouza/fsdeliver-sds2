@@ -22,4 +22,8 @@ public class ProductRest {
         List<ProductDTO> list = service.findAll();
         return ResponseEntity.ok().body(list);
     }
+//    @GetMapping("/test")
+//    public String st(){
+//        return  "Teste";
+//    }
 }
