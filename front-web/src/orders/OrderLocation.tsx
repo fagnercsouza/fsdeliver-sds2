@@ -1,4 +1,3 @@
-import { type } from 'os';
 import { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import AsyncSelect from 'react-select/async'
@@ -62,7 +61,7 @@ function OrderLocation({onChangeLocation}: Props) {
                 <h3 className="order-location-title">Selecione onde o pedido deve ser entregue:</h3>
                 <div className="filter-container">
                     <AsyncSelect 
-                        placeholder="Digite um endereço para entregar o pedido."
+                        placeholder="Digite um endereço para entregar o pedido. 56min"
                         className="filter"
                         loadOptions={loadOptions}
                         onChange={value=>handleChangeSelect(value as Place)}
