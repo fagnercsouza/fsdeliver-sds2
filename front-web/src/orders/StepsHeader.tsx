@@ -1,7 +1,7 @@
 function StepsHeader(){
 
     return(
-        <div className="orders-steps-container">
+        <header className="orders-steps-container">
             <div className="orders-steps-content">
                 <h1 className="steps-title">SIGA AS <br/>ETAPAS</h1>
                 <ul className="steps-items">
@@ -15,7 +15,7 @@ function StepsHeader(){
                     </li>
                 </ul>
             </div>
-        </div>
+        </header>
     )
 }
 
