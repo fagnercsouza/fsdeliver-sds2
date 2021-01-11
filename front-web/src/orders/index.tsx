@@ -18,7 +18,7 @@ function Orders(){
         return sum + item.price;
     }, 0)
     
-    console.log(orderLocation)
+    console.log(totalPrice+" - " + selectedProducts.length)
     useEffect(() =>{
         fetchProducts()
         .then(response => setProducts(response.data))
