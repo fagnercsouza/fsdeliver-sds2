@@ -7,10 +7,12 @@ import { fetchProducts} from '../api'
 import OrderLocation from './OrderLocation'
 import OrderSummary from './OrderSummary'
 import Footer from '../Footer'
+import { checkIsSelected } from './helpers'
 
 function Orders(){
 
     const [products, setProducts] = useState<Product[]>([])
+    const [selectedProducts, setSelectedProducts] = useState<Product[]>([])
     const [orderLocation, setOrderLocation] = useState< OrderLocationData>()
     
     console.log(orderLocation)
@@ -24,7 +26,7 @@ function Orders(){
 
 
 const handleSelectProduct = (product: Product) => {
-    const isAlreadySelected = selectedProducts.some(item => item.id === product.id);
+    const isAlreadySelected = checkIsSelected(selectedProducts, product)
   
     if (isAlreadySelected) {
       const selected = selectedProducts.filter(item => item.id !== product.id);
@@ -40,9 +42,13 @@ const handleSelectProduct = (product: Product) => {
                 <StepsHeader/>
                 <ProductsList 
                     products={products}
-                    onSelectProduct={}
+                    onSelectProduct={handleSelectProduct}
+                    selectedProducts={selectedProducts}
                 />
-                <OrderLocation onChangeLocation={location => setOrderLocation(location)}/>
+                <OrderLocation 
+                    onChangeLocation={location => 
+                    setOrderLocation(location)}
+                />
                 <OrderSummary />
             </div>
             <Footer />

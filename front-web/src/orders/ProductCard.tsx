@@ -2,7 +2,8 @@ import { Product } from './types';
 
 type Props = {
     product: Product;
-    onSelectProduct: (product: Product) => void;
+    onSelectProduct: (product: Product) => void; 
+    isSelected: boolean;
 }
 
 function formatPrice(price: number){
@@ -14,11 +15,11 @@ function formatPrice(price: number){
     })
     return formatter.format(price)
 }
-function ProductCard({product, onSelectProduct}:Props){
-
+function ProductCard({product, onSelectProduct, isSelected}:Props){
+ 
     return(
         <div 
-            className="order-card-container"
+            className={`order-card-container ${isSelected  ? 'selected' : ''}`}
             onClick={() => onSelectProduct(product)}
             >
             <div className="order-card-content">
