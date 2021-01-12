@@ -1,0 +1,13 @@
+/home/basis/projects/fsdeliver/backend/src/main/java/com/fsdev/fsdeliver/rest/OrderRest.java
+/home/basis/projects/fsdeliver/backend/src/main/java/com/fsdev/fsdeliver/dto/OrderDTO.java
+/home/basis/projects/fsdeliver/backend/src/main/java/com/fsdev/fsdeliver/entities/OrderStatus.java
+/home/basis/projects/fsdeliver/backend/src/main/java/com/fsdev/fsdeliver/service/OrderService.java
+/home/basis/projects/fsdeliver/backend/src/main/java/com/fsdev/fsdeliver/rest/ProductRest.java
+/home/basis/projects/fsdeliver/backend/src/main/java/com/fsdev/fsdeliver/FsdeliverApplication.java
+/home/basis/projects/fsdeliver/backend/src/main/java/com/fsdev/fsdeliver/entities/Product.java
+/home/basis/projects/fsdeliver/backend/src/main/java/com/fsdev/fsdeliver/dto/ProductDTO.java
+/home/basis/projects/fsdeliver/backend/src/main/java/com/fsdev/fsdeliver/repositories/ProductRepository.java
+/home/basis/projects/fsdeliver/backend/src/main/java/com/fsdev/fsdeliver/service/ProductService.java
+/home/basis/projects/fsdeliver/backend/src/main/java/com/fsdev/fsdeliver/config/SecurityConfig.java
+/home/basis/projects/fsdeliver/backend/src/main/java/com/fsdev/fsdeliver/repositories/OrderRepository.java
+/home/basis/projects/fsdeliver/backend/src/main/java/com/fsdev/fsdeliver/entities/Order.java
